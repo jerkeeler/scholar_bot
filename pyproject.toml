@@ -10,6 +10,10 @@ python = "^3.8"
 scholarly = "^0.4.1"
 python-dotenv = "^0.14.0"
 "discord.py" = "^1.4.1"
+imgurpython = "^1.1.7"
+requests = "^2.24.0"
+ipython = "^7.17.0"
+ipdb = "^0.13.3"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.6.0"
