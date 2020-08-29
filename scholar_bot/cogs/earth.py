@@ -67,7 +67,6 @@ class EarthCog(commands.Cog):
                 start_date=format_gcal_date(ent["event_start"]),
                 end_date=format_gcal_date(ent["event_end"]),
             )
-            end_time = "%I:%M %p"
             embed.add_field(
                 name=f"{title}",
                 value=(
