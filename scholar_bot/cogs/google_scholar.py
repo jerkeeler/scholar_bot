@@ -13,9 +13,9 @@ def to_lower(arg: str):
 
 def gen_scholar_embed(author, publications) -> discord.Embed:
     profile_url = PROFILE_URL.format(profile_id=author.id)
-    embed = discord.Embed(title=author.name, url=profile_url).set_thumbnail(
-        url=author.url_picture
-    )
+    embed = discord.Embed(
+        title=author.name, url=profile_url, color=discord.Color.magenta()
+    ).set_thumbnail(url=author.url_picture)
 
     for pub in publications:
         author = pub.bib["author"]

@@ -1,6 +1,6 @@
 from discord.ext import commands
 
-from .cogs import GoogleScholarCog, MemeCog, SciHubCog
+from .cogs import EarthCog, GoogleScholarCog, MemeCog, SciHubCog
 
 
 class ScholarBot(commands.Bot):
@@ -9,6 +9,7 @@ class ScholarBot(commands.Bot):
         self.add_cog(GoogleScholarCog())
         self.add_cog(SciHubCog())
         self.add_cog(MemeCog())
+        self.add_cog(EarthCog())
 
     async def on_ready(self):
         print(f"Ready as {self.user}!")
