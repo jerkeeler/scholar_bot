@@ -23,6 +23,8 @@ def imgur(query) -> discord.Embed:
 class MemeCog(commands.Cog):
     topics = {
         "crinoid": imgur,
+        "dinosaur": imgur,
+        "skeleton": imgur,
     }
 
     @commands.command()
