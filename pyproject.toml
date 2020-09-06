@@ -17,6 +17,7 @@ ipdb = "^0.13.3"
 feedparser = "^5.2.1"
 markdownify = "^0.5.2"
 pytz = "^2020.1"
+free-proxy = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.6.0"

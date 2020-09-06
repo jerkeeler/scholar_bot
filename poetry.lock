@@ -220,7 +220,7 @@ description = "Proxy scraper for further use"
 name = "free-proxy"
 optional = false
 python-versions = ">=3.6"
-version = "1.0.1"
+version = "1.0.2"
 
 [package.dependencies]
 lxml = "*"
@@ -756,7 +756,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "46ceb0953659d68566c86e3ce246416d3678b320ee7d250899bfe6cdafcb359c"
+content-hash = "bff17aaed1529eb62647671ad0f2499242a49fc43f963b85b582605e6e7630e3"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -852,8 +852,8 @@ feedparser = [
     {file = "feedparser-5.2.1.zip", hash = "sha256:cd2485472e41471632ed3029d44033ee420ad0b57111db95c240c9160a85831c"},
 ]
 free-proxy = [
-    {file = "free_proxy-1.0.1-py3-none-any.whl", hash = "sha256:557283bc19e9ae904e3123e4e409544eb78f30350bf9de22f28ad89d060a104d"},
-    {file = "free_proxy-1.0.1.tar.gz", hash = "sha256:2ede8f35e3710c748dcb25eced8f193a5c8a072b1c3cab26acdb52038bb92692"},
+    {file = "free_proxy-1.0.2-py3-none-any.whl", hash = "sha256:2a6bcf25c8ca03d186e171fe384dab299a72073f38d3e3515d068d92d9d1635c"},
+    {file = "free_proxy-1.0.2.tar.gz", hash = "sha256:91b667cc89686139695db85b926bcfad4ca1f07a3e0209359182b4f744f425b2"},
 ]
 future = [
     {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
