@@ -45,7 +45,7 @@ class GoogleScholarCog(commands.Cog):
                 return
             except Exception:
                 print("Error retrieving author.")
-                self.proxy = get_new_proxy()
+                get_new_proxy()
 
         author = author.fill()
         publications = [p.fill() for p in author.publications[:NUMBER_ARTICLES]]
