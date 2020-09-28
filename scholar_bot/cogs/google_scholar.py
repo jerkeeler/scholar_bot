@@ -4,7 +4,6 @@ from fp.fp import FreeProxy
 from scholarly import scholarly
 
 from ._formatters import to_lower
-from scholar_bot._scholarly_proxy import get_new_proxy
 
 NUMBER_ARTICLES = 3
 PROFILE_URL = "https://scholar.google.com/citations?user={profile_id}&hl=en&oi=ao"
@@ -29,24 +28,15 @@ def gen_scholar_embed(author, publications) -> discord.Embed:
 
 
 class GoogleScholarCog(commands.Cog):
-    def __init__(self):
-        super().__init__()
-
     @commands.command()
     async def gscholar(self, ctx, *, author_name: to_lower):
         """UNDER DEVELOPMENT - Retrieve list of recent papers by an author"""
-        while True:
-            search_query = scholarly.search_author(f'"{author_name}"')
-            try:
-                author = next(search_query)
-                break
-            except StopIteration:
-                await ctx.send(f"Author {author_name} not found!")
-                return
-            except Exception:
-                print("Error retrieving author.")
-                get_new_proxy()
-
+        search_query = scholarly.search_author(f'"{author_name}"')
+        try:
+            author = next(search_query)
+        except StopIteration:
+            await ctx.send(f"Author {author_name} not found!")
+            return
         author = author.fill()
         publications = [p.fill() for p in author.publications[:NUMBER_ARTICLES]]
         embed = gen_scholar_embed(author, publications)
