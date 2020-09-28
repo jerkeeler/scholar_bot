@@ -29,6 +29,7 @@ class MemeCog(commands.Cog):
 
     @commands.command()
     async def pls(self, ctx, topic):
+        print(f"Called pls with topic: {topic}")
         if topic not in self.topics:
             await ctx.send(f"No {topic} bois found")
             return

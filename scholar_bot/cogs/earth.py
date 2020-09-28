@@ -35,6 +35,7 @@ def format_gcal_date(d):
 class EarthCog(commands.Cog):
     @commands.command()
     async def events(self, ctx, cadence="month"):
+        print(f"Called events with cadence={cadence}")
         cutoff = DAY_CUTOFF.get(cadence, DAY_CUTOFF["month"])
         today = datetime.today().astimezone()
         feed = feedparser.parse(EARTH_RSS_FEED)

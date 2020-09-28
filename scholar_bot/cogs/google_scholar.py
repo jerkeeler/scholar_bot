@@ -31,6 +31,10 @@ class GoogleScholarCog(commands.Cog):
     @commands.command()
     async def gscholar(self, ctx, *, author_name: to_lower):
         """UNDER DEVELOPMENT - Retrieve list of recent papers by an author"""
+        message = await ctx.send(
+            f"Looking up {author_name}. This may take a while, please hang on..."
+        )
+        print(f"Looking up {author_name}")
         search_query = scholarly.search_author(f'"{author_name}"')
         try:
             author = next(search_query)
@@ -41,10 +45,12 @@ class GoogleScholarCog(commands.Cog):
         publications = [p.fill() for p in author.publications[:NUMBER_ARTICLES]]
         embed = gen_scholar_embed(author, publications)
         await ctx.send(embed=embed)
+        await message.delete()
 
     @commands.command()
     async def hello(self, ctx):
         """
         Says hello!
         """
+        print("Called, hello")
         await ctx.send("Hello!")
